@@ -28,7 +28,7 @@ const Toggle = () => {
         }
     }
 
-    console.log(toggle);
+    //console.log(toggle);
 
   return (
     <div className='mt-5 border bg-light p-3'>

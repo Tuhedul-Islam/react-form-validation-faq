@@ -30,3 +30,18 @@ If you are developing a production application, we recommend using TypeScript wi
   const {name, email} = userDetails;
 
 ```
+
+- useRef
+```jsx
+const hasFetched = useRef(false);
+
+useEffect(() => {
+  if (hasFetched.current) return;
+  hasFetched.current = true;
+  fetchUsers();
+}, [])
+```
+
+- Arraow Function's return
+- () => { return ; } is a block body, where you need to use return explicitly.
+- () => () is an implicit return, which is more concise and typically used for simple expressions.

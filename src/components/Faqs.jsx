@@ -10,7 +10,7 @@ const Faqs = () => {
         <u><h2 className='mb-5'>Faq</h2></u>
 
         {
-            Array.isArray(FaqData) ? (
+            Array.isArray(FaqData) ? ( 
                 FaqData.map((item) => (
                     <ul key={item.id}>
                         <SingleFaq item={item} />
