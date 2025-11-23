@@ -2,8 +2,15 @@ import React from 'react'
 import { Button, Form } from 'react-bootstrap'
 import { useFormik } from 'formik'
 import * as Yup from 'yup'
+import { ToastContainer, toast } from 'react-toastify';
+
 
 const SignUp = () => {
+
+  const notify = () => toast("Wow so easy!", {
+      position: "top-right",
+    }
+  );
 
    const SignupSchema = Yup.object({
       name: Yup.string().min(2, 'Too Short!').max(20, 'Too Long!').required('Required'),
@@ -16,6 +23,7 @@ const SignUp = () => {
       email: ''
     },
     validationSchema: SignupSchema,
+
     onSubmit: (values, {resetForm}) => {
       console.log(values);
       resetForm();
@@ -72,6 +80,9 @@ const SignUp = () => {
         <Button variant="primary" type="submit">
           Submit
         </Button>
+
+        <Button className='ms-2' onClick={notify}>Notify(Toaster)</Button>
+        <ToastContainer />
         
       </Form>
     </div>

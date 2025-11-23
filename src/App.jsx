@@ -4,6 +4,7 @@ import SignUp from './components/SignUp'
 import Toggle from './components/Toggle'
 import Faqs from './components/Faqs'
 import UseEffectApiCall from './components/UseEffectApiCall'
+import GetData from './components/GetData'
 
 
 function App() {
@@ -16,6 +17,9 @@ function App() {
       <Faqs />
 
       <UseEffectApiCall />
+
+      {/* Custom Hook */}
+      <GetData />
     </>
   )
 }

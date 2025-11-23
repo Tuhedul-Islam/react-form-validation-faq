@@ -22,7 +22,7 @@ const UseEffectApiCall = () => {
           console.error('Error fetching data:', error);
         });
     }
-  }, []); // Empty dependency array ensures this runs only on mount
+  }, []); // Empty dependency array ensures this runs only on moun t
   
   // console.log(data);
 
